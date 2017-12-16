@@ -23,12 +23,13 @@ var newCustomer = {
   phoneNumber: 1234567
 };
 
-// tableList.push(newCustomer);
-
 if (tableList.length <= 5) {
   tableList.push(newCustomer);
+  alert("your table is ready!");
 } else {
   waitList.push(newCustomer);
+  alert("you've been waitlisted!");
+
 }
 // console.log(newCustomer);
 console.log("table list: ", tableList);
