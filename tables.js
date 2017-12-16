@@ -25,10 +25,10 @@ var newCustomer = {
 };
 
 if (tableList.length <= 5) {
-  tableList.push(newCustomer);
+  tableList.push(newReservation);
   alert("your table is ready!");
 } else {
-  waitList.push(newCustomer);
+  waitList.push(newReservation);
   alert("you've been waitlisted!");
 
 }
@@ -64,11 +64,11 @@ app.get("/reservations", function(req, res) {
 });
 
 app.get("/api/tables", function(req, res) {
-  res.json(newCustomer);
+  res.json(newReservation);
 });
 
 app.get("/api/waitlist", function(req, res) {
-  res.json(newCustomer);
+  res.json(newReservation);
 });
 
 app.post("/api/add", function(req, res) {
