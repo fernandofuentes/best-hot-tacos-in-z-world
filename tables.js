@@ -17,7 +17,7 @@ var waitList = [];
 
 //push first 5 people to table list, then, if full, push to wait list
 
-var newCustomer = {
+var newReservation = {
   customerEmail: "bg@gmail.com",
   customerID: 12345,
   customerName: "brandong",
