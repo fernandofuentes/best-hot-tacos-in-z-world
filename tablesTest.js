@@ -22,7 +22,7 @@ function runTableQuery() {
 
       // Here we then log the NYTData to console, where it will show up as an object.
       console.log(tableData);
-      console.log("------------------------------------")
+      console.log("------------------------------------");
 
       // Loop through and display each of the customers
       for (var i = 0; i < tableData.length; i++) {
@@ -30,7 +30,7 @@ function runTableQuery() {
         // Create the HTML Well (Section) and Add the table content for each reserved table
         var tableSection = $("<div>");
         tableSection.addClass('well');
-        tableSection.attr('id', 'tableWell-' + i + 1)
+        tableSection.attr('id', 'tableWell-' + i + 1);
         $('#tableSection').append(tableSection);
 
         var tableNumber = i + 1;
