@@ -88,19 +88,10 @@
           url: currentURL + "/api/tables",
           method: "GET"
         })
-        .done(function(tableData) {
-
-          // Here we are logging the URL so we have access to it for troubleshooting
-          console.log("------------------------------------");
-          console.log("URL: " + currentURL + "/api/tables");
-          console.log("------------------------------------");
-
-          // Here we then log the NYTData to console, where it will show up as an object.
-          console.log(tableData);
-          console.log("------------------------------------")
+        .done(function(weightList) {
 
           // Loop through and display each of the customers
-          for (var i = 0; i < tableData.length; i++) {
+          for (var i = 0; i < weightList.length; i++) {
 
             // Create the HTML Well (Section) and Add the table content for each reserved table
             var tableSection = $("<div>");
@@ -112,7 +103,7 @@
 
 
             // Then display the remaining fields in the HTML (Section Name, Date, URL)
-            $("#tableWell-" + i + 1).append('<h2><span class="label label-primary">' + tableNumber + "</span> | " + tableData[i].customerID + "</h2>");
+            $("#tableWell-" + i + 1).append('<h2><span class="label label-primary">' + tableNumber + "</span> | " + weightList[i].customerID + "</h2>");
           }
         });
     }
